@@ -185,3 +185,141 @@ button:hover {
 
     font-weight: 300;
 }
+
+/* =========================
+   SECRET MESSAGE COVER
+========================= */
+
+#messageCover {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+
+    background: rgba(120, 190, 240, 0.35);
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        opacity 1.5s ease,
+        visibility 1.5s ease;
+
+}
+
+
+.cover-content {
+
+    width: min(85%, 400px);
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 20px 60px rgba(80, 120, 180, 0.25);
+
+}
+
+
+.heart-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation: heartbeat 2s infinite;
+
+}
+
+
+.cover-content h2 {
+
+    color: white;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+}
+
+
+#revealButton {
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 18px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #f48fb1,
+        #ec6f91
+    );
+
+    transition: 0.3s;
+
+}
+
+
+#revealButton:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ตอนกล่องหาย */
+
+#messageCover.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* Animation หัวใจ */
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+}
